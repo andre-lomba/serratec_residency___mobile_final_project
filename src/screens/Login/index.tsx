@@ -5,16 +5,19 @@ import LoginInput from '../../components/LoginInput';
 import ButtonAcess from '../../components/Button/ButtonAcess';
 import { LoginText } from '../../components/LoginText';
 import Acessar from "../../assets/images/ACESSAR.png";
-import { Color } from '../../components/COLOR/Colors';
 import CardLogCad from '../../components/CardLogCad';
 import Background from '../../components/Background';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../routes/StackNavigation';
 
-
+type LoginScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
 
 export default function Login() {
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
     const [erro, setErro] = useState<string>(" ")
+    const navigation = useNavigation<LoginScreenNavigationProp>()
 
     const handleChangeEmail = (valor: string) => {
         setEmail(valor)
@@ -22,18 +25,19 @@ export default function Login() {
 
     const handleChangeSenha = (valor: string) => {
         setSenha(valor)
-
     }
 
     const handlePressAcess = () => {
-        setErro("*Login inválido!")
+        //verifica na api
+        // setErro("*Login inválido!")
         setTimeout(() => {
             setErro(" ")
-        }, 2000)
+            navigation.navigate('Home')
+        }, 1000)
     }
 
     const handlePressCadastrar = () => {
-
+        navigation.navigate('Cadastro')
     }
 
     return (

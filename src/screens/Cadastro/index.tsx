@@ -6,7 +6,11 @@ import ButtonAcess from "../../components/Button/ButtonAcess";
 import Cadastrar from "../../assets/images/CADASTRAR.png"
 import CardLogCad from '../../components/CardLogCad';
 import Background from '../../components/Background';
-import { getPersonagens } from '../../api/apiMarvel';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../../routes/StackNavigation';
+
+type CadastroScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Cadastro'>;
 
 export default function Cadastro() {
     const [nome, setNome] = useState<string>("")
@@ -18,7 +22,8 @@ export default function Cadastro() {
     const [erroEmail, setErroEmail] = useState<string>("")
     const [erroSenha, setErroSenha] = useState<string>("")
     const [erroConfirmaSenha, setErroConfirmaSenha] = useState<string>("")
-    const [permissao, setPermissao] = useState<boolean>(true)
+    const navigation = useNavigation<CadastroScreenNavigationProp>()
+
     const testaEmail: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
     const handleChangeNome = (valor: string) => {
@@ -64,7 +69,10 @@ export default function Cadastro() {
         } else if (nome.length < 1 || email.length < 1 || senha.length < 1 || senhaConfirma.length < 1) {
             setErro("*Preencha os campos")
         } else {
-            // navigate
+            
+            setTimeout(() => {
+                navigation.goBack();
+            }, 1000);
         }
 
     }
