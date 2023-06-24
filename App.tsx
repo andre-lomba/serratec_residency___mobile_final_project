@@ -7,8 +7,8 @@ export default function App() {
   return (
     <>
       <StatusBar hidden={false} translucent={true} style="light" />
-      <Login />
-      {/* <Cadastro /> */}
+      {/* <Login /> */}
+      <Cadastro />
     </>
   );
 }

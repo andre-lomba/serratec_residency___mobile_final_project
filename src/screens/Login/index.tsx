@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import { ImageBackground, View, Image, ToastAndroid } from "react-native"
-import Background from "../../assets/images/background.png"
-import Logo from "../../assets/images/png-clipart-spider-man-carol-danvers-marvel-comics-superhero-comic-comics-avengers.png"
+import { View } from "react-native"
 import styles from "./styles"
 import LoginInput from '../../components/LoginInput';
 import ButtonAcess from '../../components/Button/ButtonAcess';
 import { LoginText } from '../../components/LoginText';
 import Acessar from "../../assets/images/ACESSAR.png";
 import { Color } from '../../components/COLOR/Colors';
+import CardLogCad from '../../components/CardLogCad';
+import Background from '../../components/Background';
 
 
 
 export default function Login() {
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
+    const [erro, setErro] = useState<string>(" ")
 
     const handleChangeEmail = (valor: string) => {
         setEmail(valor)
@@ -25,32 +26,43 @@ export default function Login() {
     }
 
     const handlePressAcess = () => {
-        notificationError();
+        setErro("*Login inválido!")
+        setTimeout(() => {
+            setErro(" ")
+        }, 2000)
     }
 
     const handlePressCadastrar = () => {
 
     }
 
-    const notificationError = () => {
-        ToastAndroid.show("Login inválido!", 5000);
-    }
-
     return (
-        <View style={styles.container}>
-            <ImageBackground source={Background} resizeMode="cover" style={styles.background}>
-                <View style={styles.card}>
-                    <Image source={Logo} style={styles.logo} />
-                    <View style={styles.inputsView}>
-                        <LoginInput iconName='envelope' value={email} onChangeText={handleChangeEmail} password={false} />
-                        <LoginInput iconName='key' value={senha} onChangeText={handleChangeSenha} secureTextEntry password={true} />
-                    </View>
-                    <View style={styles.accessView}>
-                        <ButtonAcess onPress={handlePressAcess} imageSource={Acessar} cor={Color.vermelho} />
-                        <LoginText onPress={handlePressCadastrar} />
-                    </View>
+        <Background>
+            <CardLogCad error={erro}>
+                <View style={styles.inputsView}>
+                    <LoginInput
+                        iconName='envelope'
+                        value={email}
+                        onChangeText={handleChangeEmail}
+                        password={false}
+                        label='Email'
+                        error=''
+                    />
+                    <LoginInput
+                        iconName='key'
+                        value={senha}
+                        onChangeText={handleChangeSenha}
+                        secureTextEntry
+                        password={true}
+                        label='Senha'
+                        error=''
+                    />
                 </View>
-            </ImageBackground >
-        </View >
+                <View style={styles.accessView}>
+                    <ButtonAcess onPress={handlePressAcess} imageSource={Acessar} estilo={styles.buttonImage} />
+                    <LoginText onPress={handlePressCadastrar} />
+                </View>
+            </CardLogCad>
+        </Background>
     )
 }
