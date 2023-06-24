@@ -16,6 +16,11 @@ export function getPersonagens(posicao: number) {
     .get(
       `${baseUrl}characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=100&offset=${posicao}`
     )
-    .then((response) => console.log(time, response.data.data))
+    .then((response) => console.log(time, response.data.data.name))
     .catch((err) => console.log(err));
 }
+
+export function getComics(posicao: number){
+  
+}
+
