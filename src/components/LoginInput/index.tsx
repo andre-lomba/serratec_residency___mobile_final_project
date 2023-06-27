@@ -7,7 +7,7 @@ import { Text } from 'react-native';
 interface InputProps extends TextInputProps {
     iconName: string,
     password: boolean,
-    label: string
+    label?: string
     error: string
 }
 
@@ -23,7 +23,7 @@ export default function LoginInput({ iconName, password, label, error, ...rest }
     return (
         <View style={styles.container}>
             <View style={styles.labelAndErrorView}>
-                <Text style={styles.label}>{label}</Text>
+                {label && <Text style={styles.label}>{label}</Text>}
                 {error.length > 0 && <Text style={styles.error}>{error}</Text>}
             </View>
             <View style={styles.line}>

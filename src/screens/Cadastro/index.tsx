@@ -9,6 +9,7 @@ import Background from '../../components/Background';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/StackNavigation';
+import { registerUser } from '../../services/api/apiMarvel';
 
 type CadastroScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Cadastro'>;
 
@@ -60,7 +61,7 @@ export default function Cadastro() {
         setSenhaConfirma(valor);
     }
 
-    const handlePressSubmit = () => {
+    const handlePressSubmit = async () => {
         if (erroNome.length > 0 || erroEmail.length > 0 || erroSenha.length > 0 || erroConfirmaSenha.length > 0) {
             setErro("*Existem campos inválidos")
             setTimeout(() => {
@@ -69,7 +70,7 @@ export default function Cadastro() {
         } else if (nome.length < 1 || email.length < 1 || senha.length < 1 || senhaConfirma.length < 1) {
             setErro("*Preencha os campos")
         } else {
-            
+            await registerUser(nome, email, senha)
             setTimeout(() => {
                 navigation.goBack();
             }, 1000);

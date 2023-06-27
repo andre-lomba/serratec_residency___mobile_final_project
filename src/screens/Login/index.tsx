@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View } from "react-native"
 import styles from "./styles"
 import LoginInput from '../../components/LoginInput';
@@ -7,18 +7,27 @@ import { LoginText } from '../../components/LoginText';
 import Acessar from "../../assets/images/ACESSAR.png";
 import CardLogCad from '../../components/CardLogCad';
 import Background from '../../components/Background';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/StackNavigation';
-import { getPersonagens } from '../../api/apiMarvel';
+import { UserProps, login } from '../../services/api/apiMarvel';
+import { getData, storeData } from '../../services/asyncStorage';
 
-type LoginScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
+export type LoginScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
 
 export default function Login() {
     const [email, setEmail] = useState<string>("")
     const [senha, setSenha] = useState<string>("")
     const [erro, setErro] = useState<string>(" ")
     const navigation = useNavigation<LoginScreenNavigationProp>()
+
+    useFocusEffect(() => {
+        getData("user").then((user) => {
+            if (user !== null) {
+                navigation.navigate('Drawer')
+            }
+        })
+    })
 
     const handleChangeEmail = (valor: string) => {
         setEmail(valor)
@@ -28,15 +37,21 @@ export default function Login() {
         setSenha(valor)
     }
 
-    const handlePressAcess = () => {
-        getPersonagens();
+    const handlePressAcess = async () => {
+        try {
+            const user: UserProps = (await login(email, senha)).user;
+            storeData("user", user)
+        } catch (error) {
+            setErro("*Login inválido!")
+            return;
+        }
+        setErro(" ")
         setTimeout(() => {
-            setErro(" ")
             navigation.navigate('Drawer')
         }, 1000)
     }
 
-    const handlePressCadastrar = () => {
+    const handlePressCadastrar = async () => {
         navigation.navigate('Cadastro')
     }
 

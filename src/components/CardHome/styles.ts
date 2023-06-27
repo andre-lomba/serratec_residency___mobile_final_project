@@ -2,15 +2,16 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   card: {
-    marginTop: 100,
-    marginBottom: 30,
-    width: "95%",
+    marginTop: 120,
+    marginBottom: 60,
+    width: "93%",
+    maxHeight:"90%",
     borderRadius:15,
     backgroundColor: "#000",
     justifyContent: "space-between",
     padding: 30,
     alignItems: "center",
-    gap:15
+    gap:10
   },
 });
 
