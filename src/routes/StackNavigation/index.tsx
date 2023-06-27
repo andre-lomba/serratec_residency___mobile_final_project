@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export type RootStackParamList = {
     Login: undefined;
     Cadastro: undefined;
-    Home: undefined
+    Drawer: undefined
 };
 
 export default function StackNavigation() {
@@ -19,7 +19,7 @@ export default function StackNavigation() {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='Cadastro' component={Cadastro} />
-            <Stack.Screen name='Home' component={DrawerNavigation} />
+            <Stack.Screen name='Drawer' component={DrawerNavigation} />
         </Stack.Navigator>
     )
 }

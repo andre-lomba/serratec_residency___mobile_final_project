@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, FlatList } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import Background from "../../components/Background";
 import CardHome from "../../components/CardHome";
-import styles from "./styles";
 
 export default function Home() {
-
-    const lista: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
     return (
         <Background color>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{ justifyContent: "center", alignItems: "center" }}>

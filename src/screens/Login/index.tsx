@@ -10,6 +10,7 @@ import Background from '../../components/Background';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../routes/StackNavigation';
+import { getPersonagens } from '../../api/apiMarvel';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, 'Login'>;
 
@@ -28,11 +29,10 @@ export default function Login() {
     }
 
     const handlePressAcess = () => {
-        //verifica na api
-        // setErro("*Login inválido!")
+        getPersonagens();
         setTimeout(() => {
             setErro(" ")
-            navigation.navigate('Home')
+            navigation.navigate('Drawer')
         }, 1000)
     }
 
