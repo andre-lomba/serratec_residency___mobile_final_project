@@ -73,7 +73,7 @@ export default function Cadastro() {
             await registerUser(nome, email, senha)
             setTimeout(() => {
                 navigation.goBack();
-            }, 1000);
+            }, 800);
         }
 
     }

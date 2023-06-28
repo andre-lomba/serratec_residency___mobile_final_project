@@ -2,7 +2,7 @@ import axios from "axios";
 import { ImageSourcePropType } from "react-native";
 
 const apiMarvel = axios.create({
-  baseURL: " https://moody-cats-kiss.loca.lt/",
+  baseURL: "https://shiny-bats-greet.loca.lt",
 });
 
 export interface PersonagemProps {
@@ -32,7 +32,8 @@ export async function getPersonagens(): Promise<PersonagemProps[]> {
     const personagens: PersonagemProps[] = response.data;
     return personagens;
   } catch (error) {
-    return [];
+    console.log("getPersonagens");
+    throw error;
   }
 }
 
@@ -43,6 +44,7 @@ export async function getPersonagem(id: number): Promise<PersonagemProps> {
     const personagem: PersonagemProps = response.data;
     return personagem;
   } catch (error) {
+    console.log("getPersonagem");
     throw error;
   }
 }
@@ -54,6 +56,7 @@ export async function getUser(id: number): Promise<UserProps> {
     const user: UserProps = response.data;
     return user;
   } catch (error) {
+    console.log("getUser");
     throw error;
   }
 }
@@ -73,6 +76,7 @@ export async function registerUser(
     });
     return response.data;
   } catch (error) {
+    console.log("registerUser");
     throw error;
   }
 }
@@ -89,6 +93,7 @@ export async function login(
     });
     return response.data;
   } catch (error) {
+    console.log("login");
     throw error;
   }
 }
@@ -106,6 +111,7 @@ export async function updateAddFav(
     });
     return response.data;
   } catch (error) {
+    console.log("updateAddFav");
     throw error;
   }
 }
@@ -127,11 +133,12 @@ export async function updateRemoveFav(
     });
     return response.data;
   } catch (error) {
+    console.log("updateRemoveFav");
     throw error;
   }
 }
 
-export async function cleanFav(userId: number): Promise<UserResponse> {
+export async function cleanFav(userId: number): Promise<UserProps> {
   const url: string = "users";
   try {
     const response = await apiMarvel.patch(`${url}/${userId}`, {
@@ -139,6 +146,7 @@ export async function cleanFav(userId: number): Promise<UserResponse> {
     });
     return response.data;
   } catch (error) {
+    console.log("cleanFav");
     throw error;
   }
 }

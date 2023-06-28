@@ -20,13 +20,13 @@ const styles = StyleSheet.create({
   line: {
     flexDirection: "row",
     borderBottomWidth: 0.5,
-    borderBottomColor: "#fff",
+    borderBottomColor: `${Color.branco}`,
     width: "100%",
     alignItems: "center",
     columnGap: 10,
   },
   input: {
-    color: "#fff",
+    color: `${Color.branco}`,
     width: "75%",
     fontSize: 12,
   },

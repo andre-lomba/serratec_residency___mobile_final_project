@@ -1,13 +1,19 @@
 import { DrawerNavigationOptions } from "@react-navigation/drawer";
 import { Color } from "../../components/COLOR/Colors";
+import { Fontes } from "../../components/Fonts/Fontes";
 
 const styleDrawer: DrawerNavigationOptions = {
-  drawerActiveTintColor: `${Color.branco}`,
-  drawerActiveBackgroundColor: `${Color.cinza}`,
-  drawerInactiveBackgroundColor: `${Color.branco}`,
+  drawerActiveTintColor: `${Color.preto}`,
+  drawerInactiveTintColor: `${Color.branco}`,
+  drawerActiveBackgroundColor: `${Color.branco}`,
+  drawerInactiveBackgroundColor: `${Color.cinza}`,
+  drawerLabelStyle:{
+    fontFamily:`${Fontes.dosis400}`
+  },
   drawerStyle: {
     backgroundColor: "#1a1a1a",
     width: 200,
+
   },
   headerTransparent: true,
   headerTintColor: `${Color.branco}`,

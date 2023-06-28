@@ -1,5 +1,5 @@
-import React, { useState, createContext, useEffect } from 'react';
-import { PersonagemProps, getPersonagens } from '../../services/api/apiMarvel';
+import React, { useState, createContext } from 'react';
+import { PersonagemProps } from '../../services/api/apiMarvel';
 
 interface PersonagensProviderProps {
     children: React.ReactNode

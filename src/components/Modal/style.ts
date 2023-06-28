@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { Color } from "../COLOR/Colors";
+import { Fontes } from "../Fonts/Fontes";
 
 export const styles = StyleSheet.create({
   tela: {
@@ -10,14 +11,15 @@ export const styles = StyleSheet.create({
   },
   container: {
     maxWidth: 300,
-    backgroundColor: "grey",
+    backgroundColor: `${Color.preto}`,
     borderRadius: 15,
     padding: 20,
     paddingBottom: 30,
     alignItems: "center",
-    justifyContent: "space-between",
-    height: 500,
-    shadowColor: "#000",
+    gap:10,
+    borderColor: `${Color.branco}`,
+    borderWidth: 1,
+    shadowColor: `${Color.branco}`,
     shadowOffset: {
       width: 0,
       height: 5,
@@ -27,23 +29,37 @@ export const styles = StyleSheet.create({
     elevation: 5,
   },
   nome: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "600",
     textAlign: "center",
+    color: `${Color.amarelo}`,
+    fontFamily: `${Fontes.dosis400}`,
   },
   descricao: {
-    fontSize: 12,
+    fontSize: 13,
     textAlign: "center",
+    color: `${Color.branco}`,
+    fontFamily: `${Fontes.dosis400}`,
   },
   imagem: {
     width: 190,
     height: 190,
-    borderColor: "black",
-    borderWidth: 2,
+    borderColor: `${Color.branco}`,
+    borderWidth: 1,
+    borderRadius: 90,
   },
   top: {
     flexDirection: "row",
     justifyContent: "space-between",
-    columnGap:200
+    columnGap: 200,
   },
+  link: {
+    color: `${Color.branco}`,
+    fontFamily: `${Fontes.dosis400}`,
+  },
+  comprar:{
+    width:120,
+    height:30,
+    tintColor:`${Color.vermelho}`
+  }
 });

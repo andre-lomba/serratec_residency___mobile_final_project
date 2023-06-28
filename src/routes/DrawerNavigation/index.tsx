@@ -6,6 +6,7 @@ import { Feather } from '@expo/vector-icons';
 import styleDrawer from './styles';
 import Favoritos from '../../screens/Favoritos/index';
 import { View, TextInput, TouchableOpacity, Text } from "react-native"
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
 
@@ -24,10 +25,10 @@ export default function DrawerNavigation() {
             screenOptions={styleDrawer}>
             <Drawer.Screen name='Home' component={Home} options={{
                 drawerIcon: ({ focused }) => (
-                    <Feather
-                        name="home"
+                    <FontAwesome5 
+                        name="spider" 
                         size={24}
-                        color={focused ? 'white' : 'black'}
+                        color={focused ? 'black' : 'white'}
                     />
                 )
             }} />
@@ -36,7 +37,7 @@ export default function DrawerNavigation() {
                     <Feather
                         name="heart"
                         size={24}
-                        color={focused ? 'white' : 'black'}
+                        color={focused ? 'black' : 'white'}
                     />
                 )
             }} />

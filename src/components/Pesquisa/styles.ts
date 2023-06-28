@@ -5,11 +5,11 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     borderBottomWidth: 0.8,
-    borderBottomColor: "#fff",
+    borderBottomColor: `${Color.branco}`,
     width: "90%",
     justifyContent:"space-between",
     alignItems: "center",
-
+    paddingHorizontal:6
   },
   labelAndErrorView: {
     flexDirection: "row",
@@ -21,10 +21,14 @@ const styles = StyleSheet.create({
     color: `${Color.vermelho}`,
   },
   input: {
-    color: "#fff",
+    color: `${Color.branco}`,
     width: "85%",
     fontSize: 15,
+    textDecorationLine:"none"
   },
+  lupa:{
+    paddingBottom:10
+  }
 });
 
 export default styles;

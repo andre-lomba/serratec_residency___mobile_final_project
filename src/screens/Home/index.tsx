@@ -1,34 +1,52 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Text, FlatList } from "react-native";
+import { Text, FlatList, Image, View, BackHandler, AppState } from "react-native";
 import Background from "../../components/Background";
 import CardHome from "../../components/CardHome";
-import { PersonagemProps, getPersonagens } from "../../services/api/apiMarvel";
+import { getPersonagens, getUser } from "../../services/api/apiMarvel";
 import { PersonagensContext } from "../../context/PersonagensContext";
 import PersonagemHome from "../../components/PersonagemHome";
 import Pesquisa from "../../components/Pesquisa";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootDrawerParamList } from "../../routes/DrawerNavigation";
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { getData } from "../../services/asyncStorage";
 import { LoginScreenNavigationProp } from "../Login";
 import styles from "./styles";
+import Logo from "../../assets/images/logo.png"
+import { UserContext } from "../../context/UserContext";
 
 export default function Home() {
   const { personagens, setPersonagens } = useContext(PersonagensContext);
+  const { user, setUser } = useContext(UserContext)
   const [loading, setLoading] = useState<boolean>(true);
-  const navigation = useNavigation<LoginScreenNavigationProp>()
+  const navigation = useNavigation<LoginScreenNavigationProp>();
+
+  useEffect(() => {
+    setUserContext();
+    setPersonagensContext();
+  }, []);
 
   useFocusEffect(() => {
-    let usuario: any = {};
-    getData("user").then((user) => usuario = user.id)
-    if (!usuario) {
-      navigation.navigate('Login')
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', backAction);
+    return () => {
+      backHandler.remove();
     }
   })
 
-  useEffect(() => {
-    setPersonagensContext();
-  }, []);
+  const backAction = () => {
+    if (user.id > 0) {
+      AppState.currentState !== 'background' ? BackHandler.exitApp() : null;
+      return true;
+    }
+    return false;
+  };
+
+  const setUserContext = async () => {
+    await getData("user")
+      .then((element) => {
+        getUser(element.id)
+          .then(usuario => setUser(usuario))
+      })
+      .catch(error => navigation.navigate('Login'))
+  }
 
   const setPersonagensContext = async () => {
     await getPersonagens().then((res) => setPersonagens(res));
@@ -37,17 +55,23 @@ export default function Home() {
 
   if (loading) {
     return (
-      <Background>
+      <Background color="red">
         <></>
       </Background>
     );
   } else {
     return (
-      <Background color>
+      <Background color="red">
         <CardHome>
-          <Text style={styles.text}>𝑫𝒆𝒔𝒑𝒆𝒓𝒕𝒆 𝒐 𝒉𝒆𝒓𝒐́𝒊 𝒆𝒎 𝒗𝒐𝒄𝒆̂ 𝒄𝒐𝒎 𝒏𝒐𝒔𝒔𝒐 𝒂𝒑𝒑, 𝒂𝒅𝒊𝒄𝒊𝒐𝒏𝒆 𝒔𝒆𝒖𝒔 𝒑𝒆𝒓𝒔𝒐𝒏𝒂𝒈𝒆𝒏𝒔 𝒂́ 𝒃𝒊𝒃𝒍𝒊𝒐𝒕𝒆𝒄𝒂 𝒇𝒂𝒗𝒐𝒓𝒊𝒕𝒐𝒔 𝒆 𝒂𝒄𝒆𝒔𝒔𝒆 𝒒𝒖𝒂𝒏𝒅𝒐 𝒒𝒖𝒊𝒔𝒆𝒓.
-            𝑽𝒊𝒗𝒂 𝒂 𝒆𝒎𝒐𝒄̧𝒂̃𝒐 𝒅𝒂𝒔 𝒂𝒗𝒆𝒏𝒕𝒖𝒓𝒂𝒔 𝒆́𝒑𝒊𝒄𝒂𝒔 𝒅𝒐𝒔 𝒔𝒖𝒑𝒆𝒓-𝒉𝒆𝒓𝒐́𝒊𝒔 𝒅𝒂 𝑴𝒂𝒓𝒗𝒆𝒍!</Text>
+          <Image source={Logo} style={styles.logo} />
+          <View>
+            <Text style={styles.title}>Desperte o herói em você!</Text>
+            <Text style={styles.text}>Adicione seus personagens aos Favoritos e acesse quando quiser!
+              Viva a emoção das aventuras épicas dos super-heróis da Marvel!</Text>
+          </View>
+
           <Pesquisa />
+          {personagens.length < 1 && <Text style={styles.erroSearch}>Pesquisa sem resultados :(</Text>}
           <FlatList
             data={personagens}
             showsVerticalScrollIndicator={false}
@@ -59,6 +83,7 @@ export default function Home() {
             contentContainerStyle={{ justifyContent: "center", alignItems: "center" }}
           />
         </CardHome>
+        {/* <LogOut /> */}
       </Background>
     );
   }

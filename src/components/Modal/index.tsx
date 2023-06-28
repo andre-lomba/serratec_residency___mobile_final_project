@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
     Modal,
     Text,
@@ -11,7 +11,11 @@ import {
 import { styles } from "./style";
 import { PersonagemProps, UserProps, getUser, updateAddFav, updateRemoveFav } from "../../services/api/apiMarvel";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { getData, removeData } from "../../services/asyncStorage";
+import { getData } from "../../services/asyncStorage";
+import { UserContext } from "../../context/UserContext";
+import HQ from "../../assets/images/comprar_hq.png"
+import Close from "../../assets/images/close.png"
+import { Color } from "../COLOR/Colors";
 
 interface ModalHomeProps extends ModalProps {
     personagem: PersonagemProps;
@@ -23,69 +27,64 @@ export const ModalHome = ({
     setVisible,
     ...rest
 }: ModalHomeProps) => {
-    const [usuario, setUsuario] = useState<UserProps>()
+    const { user, setUser } = useContext(UserContext)
     const [favorito, setFavorito] = useState<boolean>(false)
     const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
-        handleGetUser();
-        setLoading(false)
-    }, [])
-
-    useEffect(() => {
-        if (usuario && !loading) {
-            setFavorito(usuario.favoritos.some(item => item === personagem.id))
+        if (user.id > 0) {
+            setFavorito(user.favoritos.some(item => item === personagem.id))
+            setLoading(false)
         }
-    }, [usuario])
-
-    const handleGetUser = async () => {
-        let id: number = 0;
-        await getData("user").then((user) => id = user.id)
-        await getUser(id).then((res) => setUsuario(res))
-    }
+    }, [user])
 
     const handlePressFav = async () => {
-        if (favorito && usuario !== undefined) {
-            await updateRemoveFav(usuario.id, personagem.id).then((res) => setUsuario(res))
-        } else if (!favorito && usuario !== undefined) {
-            await updateAddFav(usuario.id, personagem.id).then((res) => setUsuario(res))
+        if (favorito) {
+            setFavorito(false)
+            await updateRemoveFav(user.id, personagem.id).then((res) => setUser(res))
+        } else {
+            setFavorito(true)
+            await updateAddFav(user.id, personagem.id).then((res) => setUser(res))
         }
-
     }
-    return (
-        <Modal
-            {...rest}
-            animationType="slide"
-            transparent={true}
-            onRequestClose={() => {
-                setVisible(false);
-            }}
-        >
-            <View style={styles.tela}>
-                <View style={styles.container}>
-                    <View style={styles.top}>
-                        <TouchableOpacity activeOpacity={0.5} onPress={handlePressFav}>
-                            <FontAwesome5 name="heart" size={24} color={favorito ? "red" : "black"} />
-                        </TouchableOpacity>
+    if (loading) {
+        return <></>
+    } else
+        return (
+            <Modal
+                {...rest}
+                animationType="slide"
+                transparent={true}
+                onRequestClose={() => {
+                    setVisible(false);
+                }}
+            >
+                <View style={styles.tela}>
+                    <View style={styles.container}>
+                        <View style={styles.top}>
+                            <TouchableOpacity activeOpacity={0.5} onPress={handlePressFav}>
+                                <FontAwesome5 name="heart" size={24} color={favorito ? `${Color.vermelho}` : `${Color.branco}`} />
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={() => setVisible(false)}
+                                activeOpacity={0.5}
+                            >
+                                <Image source={Close} style={{ tintColor: `${Color.branco}` }} />
+                            </TouchableOpacity>
+                        </View>
+                        <Image source={{ uri: personagem.imagem }} style={styles.imagem} />
+                        <Text style={styles.nome}>{personagem.nome}</Text>
+                        <Text style={styles.descricao}>{personagem.descricao}</Text>
                         <TouchableOpacity
-                            onPress={() => setVisible(false)}
-                            activeOpacity={0.5}
+                            onPress={async () => {
+                                await Linking.openURL(personagem.link);
+                            }}
+                            activeOpacity={0.7}
                         >
-                            <FontAwesome5 name="window-close" size={24} color="black" />
+                            <Image source={HQ} style={styles.comprar} />
                         </TouchableOpacity>
                     </View>
-                    <Image source={{ uri: personagem.imagem }} style={styles.imagem} />
-                    <Text style={styles.nome}>{personagem.nome}</Text>
-                    <Text style={styles.descricao}>{personagem.descricao}</Text>
-                    <TouchableOpacity
-                        onPress={async () => {
-                            await Linking.openURL(personagem.link);
-                        }}
-                    >
-                        <Text>Clique aqui</Text>
-                    </TouchableOpacity>
                 </View>
-            </View>
-        </Modal>
-    );
+            </Modal>
+        );
 };

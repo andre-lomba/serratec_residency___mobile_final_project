@@ -28,7 +28,7 @@ export default function Pesquisa() {
     return (
         <View style={styles.container}>
             <TextInput style={styles.input} value={input} onChangeText={handleChangeText} />
-            <TouchableOpacity activeOpacity={0.5} onPress={handlePressSearch}>
+            <TouchableOpacity activeOpacity={0.5} onPress={handlePressSearch} style={styles.lupa}>
                 <FontAwesome5 name={"search"} size={25} color="#fff" />
             </TouchableOpacity>
         </View>
