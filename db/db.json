@@ -1,0 +1,252 @@
+{
+  "users": [
+    {
+      "email": "andrelombagr@gmail.com",
+      "password": "$2a$10$mU37apoEQCrQUZFc04ya7OZXr2W1sswwwmvSJXszFi0TwbJRTuBEe",
+      "nome": "André Lomba",
+      "favoritos": [
+        1009562,
+        1009187
+      ],
+      "id": 1
+    },
+    {
+      "email": "kerenmartins@gmail.com",
+      "password": "$2a$10$BG848PUeFF3IyeaRrlNk8uto/1kcwRuitXvNP7ddLGmlcAuTDARBy",
+      "nome": "keren ",
+      "favoritos": [
+        1009562,
+        1009546
+      ],
+      "id": 2
+    },
+    {
+      "email": "Lukas@teste.com",
+      "password": "$2a$10$vfGOkJJs9FwtN6QlMCmkP.QGMH.SosC9XF5ePyR3osnNbis.p9Snm",
+      "nome": "Lucas",
+      "favoritos": [],
+      "id": 3
+    },
+    {
+      "email": "yasminfi.estudos@gmail.com",
+      "password": "$2a$10$GPg0UkDRzXt67E42umwGteyDE6hRwBxXe83B8gGI8uNiY4LZDXSlu",
+      "nome": "Devyas25 ",
+      "favoritos": [
+        1009257
+      ],
+      "id": 4
+    },
+    {
+      "email": "sheila@teste.com",
+      "password": "$2a$10$1jSGoqQcGplYq2ZLaDx2yeqpRpzBKcIrWNdCA0iHIMskL7oNUiuse",
+      "nome": "Sheila",
+      "favoritos": [
+        1009562,
+        1009546,
+        1009629,
+        1009327,
+        1009378,
+        1010763
+      ],
+      "id": 5
+    }
+  ],
+  "personagens": [
+    {
+      "id": 1009368,
+      "nome": "Homem de Ferro",
+      "descricao": "Ferido, capturado e forçado a construir uma arma por seus inimigos, o industrial bilionário Tony Stark criou uma armadura avançada para salvar sua vida e escapar do cativeiro. Agora com uma nova visão da vida, Tony usa seu dinheiro e inteligência para tornar o mundo um lugar melhor e mais seguro como Homem de Ferro.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/527bb7b37ff55.jpg",
+      "link": "http://marvel.com/comics/characters/1009368/iron_man?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009351,
+      "nome": "Hulk",
+      "descricao": "Pego na explosão de uma bomba gama enquanto tentava salvar a vida de um adolescente, o Dr. Bruce Banner foi transformado na criatura incrivelmente poderosa chamada Hulk. Um herói muitas vezes incompreendido, quanto mais irritado o Hulk fica, mais forte o Hulk fica.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0.jpg",
+      "link": "http://marvel.com/comics/characters/1009351/hulk?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009664,
+      "nome": "Thor",
+      "descricao": "Como o deus nórdico do trovão e do relâmpago, Thor empunha uma das maiores armas já feitas, o martelo encantado Mjolnir. Enquanto outros descreveram Thor como um imbecil idiota e musculoso, ele é bastante inteligente e compassivo. Ele é autoconfiante e nunca, jamais pararia de lutar por uma causa que vale a pena.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/d/d0/5269657a74350.jpg",
+      "link": "http://marvel.com/comics/characters/1009664/thor?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009220,
+      "nome": "Capitão América",
+      "descricao": "Prometendo servir seu país da maneira que pudesse, o jovem Steve Rogers tomou o soro do supersoldado para se tornar o exército de um homem só da América. Lutando pelo vermelho, branco e azul por mais de 60 anos, o Capitão América é o símbolo vivo da liberdade e liberdade.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087.jpg",
+      "link": "http://marvel.com/comics/characters/1009220/captain_america?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009187,
+      "nome": "Pantera Negra",
+      "descricao": "O Pantera Negra é um super-herói fictício da Marvel Comics. Sua identidade secreta é T'Challa, que governa o reino fictício africano de Wakanda. Ele é conhecido por seu traje tecnologicamente avançado, que é feito de vibranium, um metal raro e poderoso encontrado apenas em Wakanda.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/60/5261a80a67e7d.jpg",
+      "link": "http://marvel.com/comics/characters/1009187/black_panther?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009562,
+      "nome": "Feiticeira Escarlate",
+      "descricao": "Ela é retratada como uma poderosa mutante com habilidades de manipulação da realidade e telepatia. Nos quadrinhos, Wanda é filha do vilão Magneto e possui uma história complexa, envolvendo seu envolvimento com os X-Men, Vingadores e vários eventos importantes do universo Marvel.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/70/5261a7d7c394b.jpg",
+      "link": "http://marvel.com/comics/characters/1009562/scarlet_witch?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009697,
+      "nome": "Visão",
+      "descricao": "Visão foi criado com uma nova visão do conceito por Roy Thomas e John Buscema, aparecendo pela primeira vez em Os Vingadores #57 (1968). O Visão original é um sintozóide construído por Ultron e Phineas T. Horton usando partes do Tocha Humana original, e posteriormente reconstruída.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/d0/5111527040594.jpg",
+      "link": "http://marvel.com/comics/characters/1009697/vision?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009707,
+      "nome": "Vespa",
+      "descricao": "Quando o pai de Janet Van Dyne morreu, ela convenceu o sócio de seu pai, Hank Pym, a lhe dar um suprimento de 'partículas Pym'; Pym também a submeteu a um procedimento que lhe concedeu a capacidade de, ao encolher, criar asas e disparar rajadas de energia, que ela chamou de 'picadas de vespa'.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/c0/5390dfd5ef165.jpg",
+      "link": "http://marvel.com/comics/characters/1009707/wasp?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009282,
+      "nome": "Doutor Estranho",
+      "descricao": "Como Mestre das Artes Místicas e Mago Supremo, o Dr. Stephen Vincent Strange, M.D., é normalmente considerado o maior especialista em magia da Terra. Mas esse não foi sempre o caso. No início de sua vida, ele era um cirurgião profissional famoso por sua arrogância.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/5/f0/5261a85a501fe.jpg",
+      "link": "http://marvel.com/comics/characters/1009282/doctor_strange?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009546,
+      "nome": "Vampira",
+      "descricao": "O poder primário da Vampira é a absorção de poderes sempre que ela toca na pele de algum indivíduo com superpoderes. Geralmente, esse dom é usado em outros mutantes, mas ela não 'copia' apenas poderes derivados do Gene X, como também outros seres que tiveram seu DNA modificado por interferências externas.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/3/10/5112d84e2166c.jpg",
+      "link": "http://marvel.com/comics/characters/1009546/rogue?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009629,
+      "nome": "Tempestade",
+      "descricao": "Ororo Monroe é descendente de uma antiga linhagem de sacerdotisas africanas, todas com cabelos brancos, olhos azuis e potencial para usar magia.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/40/526963dad214d.jpg",
+      "link": "http://marvel.com/comics/characters/1009629/storm?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009718,
+      "nome": "Wolverine",
+      "descricao": "Nascido com sentidos sobre-humanos e o poder de curar quase qualquer ferimento, Wolverine foi capturado por uma organização secreta canadense e recebeu um esqueleto e garras inquebráveis. Tratado como um animal, levou anos para se controlar. Agora, ele é um membro de destaque dos X-Men e dos Vingadores.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf.jpg",
+      "link": "http://marvel.com/comics/characters/1009718/wolverine?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009257,
+      "nome": "Ciclope",
+      "descricao": "Como o líder dos X-Men, Ciclope guiou outros mutantes em incontáveis missões e aventura e até se tornou o diretor da Escola de Xavier. Quando o gênero mutante estava à beira da extinção, o Ciclope gradualmente transformou os X-Men em uma facção mais extremista para garantir a sobrevivência dos mutantes, mesmo indo para a guerra contra os Vingadores durante a vinda da Fênix para a Terra, um evento que custou a vida de seu antigo mentor Charles Xavier.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/70/526547e2d90ad.jpg",
+      "link": "http://marvel.com/comics/characters/1009257/cyclops?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009327,
+      "nome": "Jean Grey",
+      "descricao": "Ela não só é um dos membros originais que fundaram os X-Men, como também foi a primeira mulher a integrar a equipe, sendo hoje uma das personagens mais populares e poderosas dos quadrinhos. Além de ser um dos membros mais importantes do time, intitulada por diversas vezes como o coração do grupo, ela também se tornou eventualmente a maior telepata do Universo Marvel. Seu famoso codinome Fênix deve-se ao fato de ter sido a anfitriã e proprietária mais conhecida da entidade cósmica Força Fênix. Jean inclusive é referida até hoje como única, ressaltada como o avatar perfeito da entidade.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/f/d0/528d3412090b4.jpg",
+      "link": "http://marvel.com/comics/characters/1009327/jean_grey?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009262,
+      "nome": "Demolidor",
+      "descricao": "Abandonado pela mãe, Matt Murdock foi criado pelo pai, o boxeador \"Battling Jack\" Murdock, em Hell's Kitchen. Percebendo que eram necessárias regras para evitar que as pessoas se comportassem mal, o jovem Matt decidiu estudar direito; no entanto, quando ele salvou um homem de um caminhão que se aproximava, derramou uma carga radioativa que deixou Matt cego enquanto aprimorava seus sentidos restantes. Sob a dura tutela do mestre cego de artes marciais Stick, Matt dominou seus sentidos aguçados e se tornou um lutador formidável.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/d/50/50febb79985ee.jpg",
+      "link": "http://marvel.com/comics/characters/1009262/daredevil?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009215,
+      "nome": "Luke Cage",
+      "descricao": "Luke Cage possui uma pele indestrutível e uma força sobre-humana, resultado de um experimento científico que deu errado enquanto ele estava cumprindo uma pena injusta na prisão. Depois de escapar, ele assume o nome de Luke Cage e usa suas habilidades para proteger as ruas de Harlem, em Nova York.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/5112d8b6e596c.jpg",
+      "link": "http://marvel.com/comics/characters/1009215/luke_cage?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009378,
+      "nome": "Jessica Jones",
+      "descricao": "Após um encontro traumático com o vilão Kilgrave, que manipula mentes, Jessica desenvolveu poderes de força sobre-humana e resistência física. No entanto, ela também lida com problemas de abuso de álcool e traumas emocionais decorrentes de seu passado.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/d/00/5390e41260345.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009378/jessica_jones?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009592,
+      "nome": "Surfista Prateado",
+      "descricao": "Quando Zenn-La foi ameaçada pela entidade devoradora de mundos conhecida como Galactus, Norrin Radd defendeu o seu planeta natal e ofereceu-se para trabalhar para Galactus, encontrando-lhe novos planetas para comer, em troca de salvar o seu. Anos mais tarde, o Surfista protegeu a Terra e muitos outros planetas, tornando-se um dos maiores heróis do universo.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/3/50/527bb6490a176.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009592/silver_surfer?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009268,
+      "nome": "Deadpool",
+      "descricao": "Deadpool é retratado como um mercenário altamente habilidoso em combate, conhecido por sua incrível capacidade de regeneração e imortalidade. Ele usa armas de fogo e espadas em suas batalhas, sendo um combatente formidável. Ele também é um especialista em artes marciais e estratégia.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/90/5261a86cacb99.jpg",
+      "link": "http://marvel.com/comics/characters/1009268/deadpool?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1010763,
+      "nome": "Gamora",
+      "descricao": "Gamora é uma alienígena de uma raça chamada Zen-Whoberis, cujo planeta foi destruído por Thanos, o titã louco. Ela foi adotada por Thanos e treinada para se tornar sua assassina pessoal. No entanto, ao longo do tempo, Gamora se rebelou contra as ações cruéis de seu pai adotivo e se tornou uma lutadora pela justiça.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/5/90/526032a2cce62.jpg",
+      "link": "https://www.marvel.com/comics/characters/1010763/gamora?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1010734,
+      "nome": "Peter Quill",
+      "descricao": "Quill é conhecido por seu charme, personalidade descontraída e senso de humor sarcástico. Ele é um piloto habilidoso e um combatente treinado, mas muitas vezes age de forma impulsiva e impulsiva. Sua arma de escolha é uma pistola chamada Element Gun, que pode disparar diferentes tipos de energia.",
+      "imagem": "https://cdn.marvel.com/u/prod/marvel/i/mg/9/a0/537bc55e8b1f5/standard_incredible.jpg",
+      "link": "http://marvel.com/comics/characters/1010734/peter_quill?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1010735,
+      "nome": "Drax, o Destruidor",
+      "descricao": "Originalmente chamado de Arthur Douglas, Drax foi um ser humano comum até que sua família foi assassinada pelo supervilão Thanos. Após sua morte, Arthur foi ressuscitado pelo Titã Louco com um novo corpo aprimorado, tornando-se Drax, o Destruidor, com o objetivo de caçar e destruir Thanos.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/e/d0/526032deabbff.jpg",
+      "link": "https://www.marvel.com/comics/characters/1010735/drax?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1010743,
+      "nome": "Groot",
+      "descricao": "Groot é dotado de habilidades especiais, como regeneração acelerada e a capacidade de controlar e manipular plantas. Ele também possui força física extraordinária. Groot se destaca por seu comportamento altruísta e leal, sendo um importante membro da equipe dos Guardiões da Galáxia e cativando o público com seu carisma e personalidade única.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/3/10/526033c8b474a.jpg",
+      "link": "https://www.marvel.com/comics/characters/1010743/groot?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1010744,
+      "nome": "Rocket Raccoon",
+      "descricao": "Ele é um guaxinim antropomórfico altamente inteligente e habilidoso em combate. Com seu temperamento sarcástico e seu amor por armas de fogo, Rocket é um especialista em táticas militares, engenharia e pilotagem de naves espaciais.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/b0/50fec1e49298a.jpg",
+      "link": "https://www.marvel.com/comics/characters/1010744/rocket_raccoon?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009366,
+      "nome": "Mulher Invisível",
+      "descricao": "Susan Storm possui a habilidade de se tornar invisível, além de poder criar campos de força poderosos. Ela é conhecida por sua personalidade equilibrada e corajosa, muitas vezes servindo como a voz da razão dentro do Quarteto Fantástico.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/6/a0/52695b9cd40b6.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009366/invisible_woman?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009356,
+      "nome": "Tocha Humana",
+      "descricao": "Johnny adquire seus poderes quando ele e o resto do Quarteto Fantástico são expostos a raios cósmicos durante uma missão espacial. Ele se torna capaz de se envolver em chamas e voar, além de gerar calor intenso. ",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/3/70/5261a7f7b0917.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009356/human_torch?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009662,
+      "nome": "Coisa",
+      "descricao": "A radiação que transformou Reed Richards, Sue Storm e Johnny Storm em seres sobre-humanos também transformou Ben Grimm, transformando-o em um grotesco homem forte escondido na rocha apelidado de Coisa.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/9/00/527bb4d36b5c2.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009662/thing?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    },
+    {
+      "id": 1009459,
+      "nome": "Senhor Fantástico",
+      "descricao": "Reed Richards é um cientista brilhante, conhecido por sua genialidade e habilidades intelectuais. Ele possui um intelecto super-humano e é considerado um dos maiores gênios do Universo Marvel.",
+      "imagem": "http://i.annihil.us/u/prod/marvel/i/mg/d/c0/51127e9337538.jpg",
+      "link": "https://www.marvel.com/comics/characters/1009459/mr_fantastic?utm_campaign=apiRef&utm_source=13b01a0ea5a227eb0a97669df301fb40"
+    }
+  ]
+}
