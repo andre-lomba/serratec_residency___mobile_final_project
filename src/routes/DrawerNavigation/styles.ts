@@ -8,19 +8,20 @@ const styleDrawer: DrawerNavigationOptions = {
   drawerActiveBackgroundColor: `${Color.branco}`,
   drawerInactiveBackgroundColor: `${Color.cinza}`,
   drawerLabelStyle:{
-    fontFamily:`${Fontes.dosis400}`
+    fontFamily:`${Fontes.dosis600}`,
+    width:250,
   },
   drawerStyle: {
-    backgroundColor: "#1a1a1a",
-    width: 200,
+    backgroundColor: "#12002b",
+    width: 230,
 
+  },
+  drawerItemStyle:{
+    width:"90%"
   },
   headerTransparent: true,
   headerTintColor: `${Color.branco}`,
-  headerTitle: "",
-  headerStyle:{
-    // height:10
-  },
+  headerTitle: ""
 };
 
 export default styleDrawer;

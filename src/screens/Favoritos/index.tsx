@@ -2,12 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Text, Image, TouchableOpacity, View } from "react-native";
 import Background from "../../components/Background";
 import CardHome from "../../components/CardHome";
-import {
-  PersonagemProps,
-  cleanFav,
-  getPersonagem,
-  getUser,
-} from "../../services/api/apiMarvel";
+import {PersonagemProps, cleanFav, getPersonagem, getUser} from "../../services/api/apiMarvel";
 import { getData } from "../../services/asyncStorage";
 import { FlatList } from "react-native-gesture-handler";
 import PersonagemHome from "../../components/PersonagemHome";
@@ -15,6 +10,7 @@ import { UserContext } from "../../context/UserContext";
 import Favoritos from "../../assets/images/favoritos.png"
 import { styles } from "./style"
 import { ButtonRedirect } from "../../components/ButtonRedirect";
+
 
 export default function Favorito() {
   const [loading, setLoading] = useState<boolean>(true);

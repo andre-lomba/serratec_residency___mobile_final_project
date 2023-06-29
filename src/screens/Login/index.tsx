@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View } from "react-native";
+import { BackHandler, View } from "react-native";
 import styles from "./styles";
 import LoginInput from "../../components/LoginInput";
 import ButtonAcess from "../../components/Button/ButtonAcess";
@@ -7,7 +7,7 @@ import { LoginText } from "../../components/LoginText";
 import Acessar from "../../assets/images/ACESSAR.png";
 import CardLogCad from "../../components/CardLogCad";
 import Background from "../../components/Background";
-import { useNavigation } from "@react-navigation/native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { RootStackParamList } from "../../routes/StackNavigation";
 import { UserProps, login } from "../../services/api/apiMarvel";
@@ -28,12 +28,22 @@ export default function Login() {
 
   useEffect(() => {
     getData("user").then((user) => {
-      if (user.id > 0) {
+      if (user && user.id > 0) {
         navigation.navigate("Drawer");
       }
       setLoading(false)
     }).catch();
   }, [])
+
+  useFocusEffect(() => {
+    const backHandler = BackHandler.addEventListener('hardwareBackPress', () => {
+      BackHandler.exitApp();
+      return true;
+    });
+    return () => {
+      backHandler.remove();
+    }
+  })
 
   const handleChangeEmail = (valor: string) => {
     setEmail(valor);

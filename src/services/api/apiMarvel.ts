@@ -2,7 +2,7 @@ import axios from "axios";
 import { ImageSourcePropType } from "react-native";
 
 const apiMarvel = axios.create({
-  baseURL: "https://shiny-bats-greet.loca.lt",
+  baseURL: "https://eighty-nails-sell.loca.lt",
 });
 
 export interface PersonagemProps {

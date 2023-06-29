@@ -12,6 +12,13 @@ import { LoginScreenNavigationProp } from "../Login";
 import styles from "./styles";
 import Logo from "../../assets/images/logo.png"
 import { UserContext } from "../../context/UserContext";
+import { RootDrawerParamList } from "../../routes/DrawerNavigation";
+import {DrawerNavigationProp} from "@react-navigation/drawer"
+
+export type HomeScreenNavigationProp = DrawerNavigationProp<
+  RootDrawerParamList,
+  "Home"
+>;
 
 export default function Home() {
   const { personagens, setPersonagens } = useContext(PersonagensContext);
