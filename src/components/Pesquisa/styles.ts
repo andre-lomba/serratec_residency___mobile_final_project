@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../COLOR/Colors";
+import { Color } from "../../utils/COLOR/Colors";
 
 const styles = StyleSheet.create({
   container: {
@@ -7,9 +7,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 0.8,
     borderBottomColor: `${Color.branco}`,
     width: "90%",
-    justifyContent:"space-between",
+    justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal:6
+    paddingHorizontal: 6,
   },
   labelAndErrorView: {
     flexDirection: "row",
@@ -24,11 +24,11 @@ const styles = StyleSheet.create({
     color: `${Color.branco}`,
     width: "85%",
     fontSize: 15,
-    textDecorationLine:"none"
+    textDecorationLine: "none",
   },
-  lupa:{
-    paddingBottom:10
-  }
+  lupa: {
+    paddingBottom: 10,
+  },
 });
 
 export default styles;

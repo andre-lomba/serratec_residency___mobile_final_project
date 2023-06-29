@@ -79,7 +79,7 @@ export default function Cadastro() {
     }
 
     return (
-        <Background>
+        <Background color='p&b'>
             <CardLogCad error={erro}>
                 <View style={styles.inputsView}>
                     <LoginInput

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../COLOR/Colors";
-import { Fontes } from "../Fonts/Fontes";
+import { Color } from "../../utils/COLOR/Colors";
+import { Fontes } from "../../utils/Fonts/Fontes";
 
 export const styles = StyleSheet.create({
   tela: {
@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     padding: 20,
     paddingBottom: 30,
     alignItems: "center",
-    gap:10,
+    gap: 10,
     borderColor: `${Color.branco}`,
     borderWidth: 1,
     shadowColor: `${Color.branco}`,
@@ -57,9 +57,9 @@ export const styles = StyleSheet.create({
     color: `${Color.branco}`,
     fontFamily: `${Fontes.dosis400}`,
   },
-  comprar:{
-    width:120,
-    height:30,
-    tintColor:`${Color.vermelho}`
-  }
+  comprar: {
+    width: 120,
+    height: 30,
+    tintColor: `${Color.vermelho}`,
+  },
 });

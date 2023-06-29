@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../../components/COLOR/Colors";
-import { Fontes } from "../../components/Fonts/Fontes";
+import { Color } from "../../utils/COLOR/Colors";
+import { Fontes } from "../../utils/Fonts/Fontes";
 
 export const styles = StyleSheet.create({
   backGround: {
@@ -33,8 +33,8 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  bottom:{
-    flexDirection:"row",
-    columnGap:100
-  }
+  bottom: {
+    flexDirection: "row",
+    columnGap: 100,
+  },
 });

@@ -5,8 +5,11 @@
       "password": "$2a$10$mU37apoEQCrQUZFc04ya7OZXr2W1sswwwmvSJXszFi0TwbJRTuBEe",
       "nome": "André Lomba",
       "favoritos": [
-        1009562,
-        1009187
+        1009187,
+        1009592,
+        1010743,
+        1009366,
+        1009546
       ],
       "id": 1
     },
@@ -49,6 +52,20 @@
         1010763
       ],
       "id": 5
+    },
+    {
+      "email": "androidteste@android.com",
+      "password": "$2a$10$kjxrWkl3qtpkIghcxDDikOh5NbtfSSiujvP1IIMd2bAjgqDWEiJgK",
+      "nome": "Teste Android",
+      "favoritos": [],
+      "id": 6
+    },
+    {
+      "email": "grupo3@gmail.com",
+      "password": "$2a$10$K1vpvvVzKhdkfckGL.58vufn.DMxb1sBRiak.et8Mn3VJKYsxWZCy",
+      "nome": "Grupo 3",
+      "favoritos": [],
+      "id": 7
     }
   ],
   "personagens": [

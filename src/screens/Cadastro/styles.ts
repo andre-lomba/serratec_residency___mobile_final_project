@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../../components/COLOR/Colors";
+import { Color } from "../../utils/COLOR/Colors";
 
 const styles = StyleSheet.create({
   inputsView: {
@@ -8,13 +8,13 @@ const styles = StyleSheet.create({
   },
   accessView: {
     height: 120,
-    justifyContent:"center",
-    alignItems:"center"
+    justifyContent: "center",
+    alignItems: "center",
   },
   buttonImage: {
     width: 220,
     height: 45,
-    tintColor:`${Color.amarelo}`
+    tintColor: `${Color.amarelo}`,
   },
 });
 

@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { View, Image, Button, TouchableOpacity, Linking, Text, TouchableOpacityProps } from "react-native";
+import { TouchableOpacity, Linking, TouchableOpacityProps } from "react-native";
 import styles from "./styles";
 
 interface ButtonRedirectProps extends TouchableOpacityProps {

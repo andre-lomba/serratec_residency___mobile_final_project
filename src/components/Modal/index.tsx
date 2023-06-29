@@ -9,13 +9,12 @@ import {
     Linking,
 } from "react-native";
 import { styles } from "./style";
-import { PersonagemProps, UserProps, getUser, updateAddFav, updateRemoveFav } from "../../services/api/apiMarvel";
+import { PersonagemProps, updateAddFav, updateRemoveFav } from "../../services/api/apiMarvel";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { getData } from "../../services/asyncStorage";
 import { UserContext } from "../../context/UserContext";
 import HQ from "../../assets/images/comprar_hq.png"
 import Close from "../../assets/images/close.png"
-import { Color } from "../COLOR/Colors";
+import { Color } from "../../utils/COLOR/Colors";
 
 interface ModalHomeProps extends ModalProps {
     personagem: PersonagemProps;

@@ -1,15 +1,8 @@
 import React, { useState } from "react";
-import {
-    Text,
-    TouchableOpacity,
-    Image,
-    View,
-    Pressable,
-} from "react-native";
+import { Text, TouchableOpacity, Image } from "react-native";
 import { PersonagemProps } from "../../services/api/apiMarvel";
 import styles from "./styles";
 import { ModalHome } from "../Modal";
-
 
 interface PersonagemHomeProps {
     personagem: PersonagemProps;

@@ -1,5 +1,5 @@
-import React, { useState, ReactNode } from 'react';
-import { ImageBackground, ImageBackgroundProps, StyleProp, ViewProps, ViewStyle } from 'react-native';
+import React, { ReactNode } from 'react';
+import { ImageBackground, StyleProp, ViewStyle } from 'react-native';
 import { View } from 'react-native';
 import Fundo from "../../assets/images/background.png"
 import FundoVermelho from "../../assets/images/light_red.png"
@@ -15,17 +15,17 @@ interface BackgroundProps {
 export default function Background({ children, color, style }: BackgroundProps) {
     return (
         <View style={styles.container}>
-            {color==='red' ?
+            {color === 'red' ?
                 <ImageBackground source={FundoVermelho} resizeMode="cover" style={[styles.background, style]}>
                     {children}
-                </ImageBackground> : color==='yellow' ? 
-                <ImageBackground source={FundoAmarelo} resizeMode="cover" style={[styles.background, style]}>
-                {children}
-            </ImageBackground>
-                : 
-                <ImageBackground source={Fundo} resizeMode="cover" style={styles.background}>
-                    {children}
-                </ImageBackground>
+                </ImageBackground> : color === 'yellow' ?
+                    <ImageBackground source={FundoAmarelo} resizeMode="cover" style={[styles.background, style]}>
+                        {children}
+                    </ImageBackground>
+                    :
+                    <ImageBackground source={Fundo} resizeMode="cover" style={styles.background}>
+                        {children}
+                    </ImageBackground>
             }
         </View>
     )

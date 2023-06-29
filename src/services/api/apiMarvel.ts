@@ -2,7 +2,7 @@ import axios from "axios";
 import { ImageSourcePropType } from "react-native";
 
 const apiMarvel = axios.create({
-  baseURL: "https://eighty-nails-sell.loca.lt",
+  baseURL: "https://red-cycles-bet.loca.lt/",
 });
 
 export interface PersonagemProps {
@@ -32,7 +32,6 @@ export async function getPersonagens(): Promise<PersonagemProps[]> {
     const personagens: PersonagemProps[] = response.data;
     return personagens;
   } catch (error) {
-    console.log("getPersonagens");
     throw error;
   }
 }
@@ -44,7 +43,6 @@ export async function getPersonagem(id: number): Promise<PersonagemProps> {
     const personagem: PersonagemProps = response.data;
     return personagem;
   } catch (error) {
-    console.log("getPersonagem");
     throw error;
   }
 }
@@ -56,7 +54,6 @@ export async function getUser(id: number): Promise<UserProps> {
     const user: UserProps = response.data;
     return user;
   } catch (error) {
-    console.log("getUser");
     throw error;
   }
 }
@@ -76,7 +73,6 @@ export async function registerUser(
     });
     return response.data;
   } catch (error) {
-    console.log("registerUser");
     throw error;
   }
 }
@@ -93,7 +89,6 @@ export async function login(
     });
     return response.data;
   } catch (error) {
-    console.log("login");
     throw error;
   }
 }
@@ -111,7 +106,6 @@ export async function updateAddFav(
     });
     return response.data;
   } catch (error) {
-    console.log("updateAddFav");
     throw error;
   }
 }
@@ -133,7 +127,6 @@ export async function updateRemoveFav(
     });
     return response.data;
   } catch (error) {
-    console.log("updateRemoveFav");
     throw error;
   }
 }
@@ -146,7 +139,6 @@ export async function cleanFav(userId: number): Promise<UserProps> {
     });
     return response.data;
   } catch (error) {
-    console.log("cleanFav");
     throw error;
   }
 }

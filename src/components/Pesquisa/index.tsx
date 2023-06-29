@@ -6,7 +6,7 @@ import styles from "./styles";
 import { PersonagemProps, getPersonagens } from "../../services/api/apiMarvel";
 
 export default function Pesquisa() {
-    const { personagens, setPersonagens } = useContext(PersonagensContext);
+    const { setPersonagens } = useContext(PersonagensContext);
     const [input, setInput] = useState<string>("")
 
     const handleChangeText = async (valor: string) => {
